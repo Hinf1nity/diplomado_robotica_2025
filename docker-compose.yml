@@ -8,8 +8,8 @@ services:
     gpus: all
     network_mode: host
     privileged: true
-    user: "ros"
-    working_dir: /home/ros/ros_ws
+    user: "ubuntu"
+    working_dir: /home/ubuntu/ros_ws
     tty: true
     stdin_open: true
     command: bash
@@ -23,4 +23,4 @@ services:
       - "/dev/dri:/dev/dri" # Allow OpenGL rendering
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - $PWD:/home/ros/ros_ws
+      - $PWD:/home/ubuntu/ros_ws
