@@ -24,7 +24,13 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'joints_pub = forward_kinematics.joints_pub:main',
+            'joint_pub = forward_kinematics.joints_pub:main',
+            'joint_sub = forward_kinematics.joint_sub:main',
+            'fwd_rr = forward_kinematics.fwd_rr:main',
+            'fwd_kr6 = forward_kinematics.fwd_kr6:main',
+            'jinv_kr6 = forward_kinematics.jinv_kr6:main',
+            'jinv_ur5 = forward_kinematics.jinv_ur5:main',
+            'rodrigues = forward_kinematics.rodrigues:main',
         ],
     },
 )
