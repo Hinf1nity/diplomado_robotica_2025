@@ -2,11 +2,13 @@ FROM osrf/ros:jazzy-desktop-full
 RUN apt-get update && apt-get install -y \
     nano \
     ros-jazzy-ros2-control \
+    ros-jazzy-gz-ros2-control-demos \
     ros-jazzy-ros2-controllers \
     ros-jazzy-ros-gz \
     ros-jazzy-gz-ros2-control \
     ros-jazzy-twist-mux \
     ros-jazzy-joint-state-publisher-gui \
+    ros-jazzy-turtlebot3* \
     && rm -rf /var/lib/apt/lists/*
 
 ARG USERNAME=ubuntu

@@ -3,3 +3,6 @@
 /install
 /log
 /src/Universal_Robots_ROS2_Description
+/src/gazebo_robot_simulation
+/src/yaskawa_robot
+/src/zm_robot
