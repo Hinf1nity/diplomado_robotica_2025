@@ -12,11 +12,21 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-tf2-ros \
     ros-jazzy-tf2-geometry-msgs \
     python3-pip \
-    python3-venv \
+    libfltk1.3-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libglu1-mesa-dev \
+    libltdl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m venv /home/$USERNAME/venv && \
-    /home/$USERNAME/venv/bin/pip install numpy scipy
+RUN pip install --no-cache-dir --break-system-packages \
+    numpy \
+    scipy \
+    catkin_pkg \
+    matplotlib \
+    scikit-learn \
+    torch \
+    torchvision
 
 ARG USERNAME=ubuntu
 ARG USER_UID=1000
